@@ -209,3 +209,21 @@ exercises.c:147:46: error: expected statement before ‘)’ token
       |                                              ^
 cc1: all warnings being treated as errors
 62826d8
+Sun Aug 16 11:09:53 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:136:19: error: unused variable ‘ultimo’ [-Werror=unused-variable]
+  136 |             char *ultimo = pop(pilaParentesis);
+      |                   ^~~~~~
+exercises.c:139:33: error: ‘ultimo’ undeclared (first use in this function)
+  139 |          if((*actual == ')' && *ultimo != '('))
+      |                                 ^~~~~~
+exercises.c:139:33: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:147:46: error: expected statement before ‘)’ token
+  147 |          if(*actual == ']' && *ultimo != '['))
+      |                                              ^
+cc1: all warnings being treated as errors
+e545798
