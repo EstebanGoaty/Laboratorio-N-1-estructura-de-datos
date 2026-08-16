@@ -133,7 +133,20 @@ int parentesisBalanceados(char *cadena) {
          }
          else if((*actual == ')')||(*actual == ']')||(*actual == '}'))
          {
+            char *ultimo = pop(pilaParentesis)
             pop(pilaParentesis);
+         }
+         if((*actual == ')' && *ultimo != '('))
+         {
+            return 0;
+         }
+         if((*actual == '}' && *ultimo != '{'))
+         {
+            return 0;
+         }
+         if(*actual == ']' && *ultimo != '['))
+         {
+            return 0;
          }
       }
    if(top(pilaParentesis) != NULL)
