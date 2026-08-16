@@ -127,11 +127,11 @@ int parentesisBalanceados(char *cadena) {
    for(int i = 0; cadena[i] != '\0'; i++)
       {
          char *actual = &cadena[i];
-         if(*actual == '(')
+         if((*actual == '(')||(*actual == '[')||(*actual == '{'))
          {
             push(pilaParentesis, actual);
          }
-         else if(*actual == ')')
+         else if((*actual == ')')||(*actual == ']')||(*actual == '}'))
          {
             pop(pilaParentesis);
          }
