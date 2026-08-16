@@ -227,3 +227,13 @@ exercises.c:147:46: error: expected statement before ‘)’ token
       |                                              ^
 cc1: all warnings being treated as errors
 e545798
+Sun Aug 16 11:11:23 PM UTC 2026: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:147:49: error: expected statement before ‘)’ token
+  147 |             if(*actual == ']' && *ultimo != '['))
+      |                                                 ^
+b10fc84

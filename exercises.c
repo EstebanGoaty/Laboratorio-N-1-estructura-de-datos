@@ -135,18 +135,19 @@ int parentesisBalanceados(char *cadena) {
          {
             char *ultimo = pop(pilaParentesis);
             pop(pilaParentesis);
-         }
-         if((*actual == ')' && *ultimo != '('))
-         {
-            return 0;
-         }
-         if((*actual == '}' && *ultimo != '{'))
-         {
-            return 0;
-         }
-         if(*actual == ']' && *ultimo != '['))
-         {
-            return 0;
+         
+            if((*actual == ')' && *ultimo != '('))
+            {
+               return 0;
+            }
+            if((*actual == '}' && *ultimo != '{'))
+            {
+               return 0;
+            }
+            if(*actual == ']' && *ultimo != '['))
+            {
+               return 0;
+            }
          }
       }
    if(top(pilaParentesis) != NULL)
