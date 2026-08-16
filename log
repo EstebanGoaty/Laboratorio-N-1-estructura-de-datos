@@ -109,3 +109,31 @@ Sun Aug 16 09:55:25 PM UTC 2026:
  tests:  4|1
 total_score: 50/70
 1afea6e
+Sun Aug 16 10:13:06 PM UTC 2026: 
+ exercises.c | 21 ++++++++++++++++++++-
+ 1 file changed, 20 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:126:28: error: implicit declaration of function ‘crear_stack’; did you mean ‘create_stack’? [-Wimplicit-function-declaration]
+  126 |    Stack *pilaParentesis = crear_stack();
+      |                            ^~~~~~~~~~~
+      |                            create_stack
+exercises.c:126:28: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+exercises.c:130:20: error: comparison between pointer and integer [-Werror]
+  130 |          if(actual == '(')
+      |                    ^~
+exercises.c:134:25: error: comparison between pointer and integer [-Werror]
+  134 |          else if(actual == ')')
+      |                         ^~
+exercises.c:139:26: error: passing argument 1 of ‘top’ makes pointer from integer without a cast [-Wint-conversion]
+  139 |    if(top(pilaParentesis != NULL))
+      |                          ^
+      |                          |
+      |                          int
+In file included from exercises.c:7:
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+cc1: all warnings being treated as errors
+f1bb300
