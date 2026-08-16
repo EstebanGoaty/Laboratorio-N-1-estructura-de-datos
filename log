@@ -160,3 +160,19 @@ stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is o
       |           ~~~~~~~^~~~~
 cc1: all warnings being treated as errors
 c83406e
+Sun Aug 16 10:14:20 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:139:26: error: passing argument 1 of ‘top’ makes pointer from integer without a cast [-Wint-conversion]
+  139 |    if(top(pilaParentesis != NULL))
+      |                          ^
+      |                          |
+      |                          int
+In file included from exercises.c:7:
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+9eaec03
