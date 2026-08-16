@@ -112,6 +112,7 @@ void copia_pila(Stack* P1, Stack* P2) {
          push(P1, dato);
          dato = pop(auxiliar);
       }
+   free(auxiliar);
 }   
 
 /*
@@ -122,6 +123,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
+   
    return 0;
 }
 
